@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="UTF-8">
-    <title> Log </title>
+    <title> Formulario </title>
     <link rel="stylesheet" href="/Estilos/Formularios.css">
     <!-- Fontawesome CDN Link -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
@@ -49,22 +49,25 @@
             </div>
         </form>
       </div>
+
+
+
         <div class="signup-form">
           <div class="title">Registrate</div>
-        <form action="" method="post">
+        <form action="/validar" method="post">
             <div class="input-boxes">
             
               <div class="input-box">
                 <i class="fas fa-user"></i>
-                <input type="text" name="nombre" placeholder= "Ingresa tu nombre" required>
+                <input type="text" name="nombre" id="nombre" placeholder= "Ingresa tu nombre" required>
               </div>
               <div class="input-box">
                 <i class="fas fa-envelope"></i>
-                <input type="text" name="CorreoElectronico" placeholder= "Ingresa tu email" required>
+                <input type="text" name="CorreoElectronico" id="CorreoElectronico" placeholder= "Ingresa tu email" required>
               </div>
               <div class="input-box">
                 <i class="fas fa-lock"></i>
-                <input type="password" name="Contrasena" placeholder= "Ingresa tu contraseña" required>
+                <input type="password" name="Contrasena" id="Contrasena" placeholder= "Ingresa tu contraseña" required>
               </div>
               <div class="button input-box">
                 <input type="submit" value="Sumbit">
