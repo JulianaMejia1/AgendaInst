@@ -17,5 +17,9 @@ conexion.connect(function(err) {
         console.log("Conexión exitosa");
     }
 });
+
+export default conexion;
+
 //Se cierra conexion
-conexion.end();
+//conexion.end();
+
