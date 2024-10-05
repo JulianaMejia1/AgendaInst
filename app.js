@@ -27,6 +27,12 @@ import routes from './routes/forms.js'
 
 app.use('/form', routes)
 
+import functionregistro from './routes/forms.js'
+
+app.post("/registro", (req, res)=>{
+    functionregistro.registro(req, res)
+})
+
 app.listen(port, ()=>{
     console.log(`Server running at http://localhost:${port}`)
 }).on('error', (err)=>{

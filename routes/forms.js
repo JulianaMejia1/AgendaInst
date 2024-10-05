@@ -18,8 +18,25 @@ router.get('/registro', (req, res) => {
     res.render('formularios/formularios'); // Render the form.ejs template
 });
 
+import conexion from '../Js/conexion.js'
 
+
+async (params) => {
+    
+}
 //insertar
+const registro = async (req,res)=>{
+    const {correo,contrasena}=req.body;
+    const query = 'INSERT INTO accesousuarios(CorreoElectronico, Contrasena) VALUES(?,?)'
+    try {
+        await conexion.conexion(query, [correo, contrasena])
+        res.status(200).send();
+    } catch (error) {
+        if (error) res.status(500).send()
+    }
+}
 
 
 export default router;
+
+export {registro};

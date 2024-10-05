@@ -1,8 +1,8 @@
 // Importa el módulo 'mysql'
-const mysql = require("mysql");
 
+import { createConnection } from "mysql";
 // Configura los detalles de la conexión
-const conexion = mysql.createConnection({
+const conexion = createConnection({
     host: "localhost",
     database: "mydb", 
     user: "root", 

@@ -261,7 +261,9 @@ body {
     display: none;
   }
 }
+
     </style>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
    </head>
 <body>
   <div class="container">
@@ -320,7 +322,7 @@ body {
                 <input type="password" name="Contrasena" id="Contrasena" placeholder= "Ingresa tu contraseña" required>
               </div>
               <div class="button input-box">
-                <input type="submit" value="Submit">
+                <input type="submit" value="submit">
               </div>
               <div class="text sign-up-text">Ya tienes una cuenta? <label for="flip">Inicia ahora</label></div>
             </div>
@@ -348,16 +350,11 @@ body {
               timer: 1000,
             }).then(() => {
               setTimeout(() => {
-                window.location.href = "http://localhost:3000/map";
+                window.location.href = "/";
               }, 500); // Retraso de 500 milisegundos (0.5 segundos)
             });
-          } else if (response.status == 404) {
-            swal("Ooops", "Usuario no encontrado", "error", {
-              buttons: false,
-              timer: 1000,
-            });
           } else {
-            swal("Ooops", "No se pudo ingresar la direccion", "error", {
+            swal("Ooops", "No se pudo ingresar el usuario", "error", {
               buttons: false,
               timer: 1000,
             });
