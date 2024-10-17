@@ -20,12 +20,13 @@ app.use(express.json())
 app.use(express.urlencoded({ extended: true}))
 
 const dinamicdir = path.join(__dirname, 'views')
+
 app.set('views', dinamicdir)
 app.set('view engine', 'ejs')
 
-import routes from './routes/forms.js'
+import router from './routes/forms.js'
 
-app.use('/form', routes)
+app.use('/', router)
 
 import functionregistro from './routes/forms.js'
 

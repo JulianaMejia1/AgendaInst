@@ -10,20 +10,13 @@ const __dirname = dirname(__filename);
 
 const publicDir = path.join(__dirname, '../public');
 
-router.get('/login', (req, res) => {
-    res.sendFile(path.join(publicDir, 'hello.html'));
-});
 
-router.get('/registro', (req, res) => {
-    res.render('formularios/formularios'); // Render the form.ejs template
+router.get('/form', (req, res) => {
+    res.render('forms/forms'); // Render the form.ejs template
 });
 
 import conexion from '../Js/conexion.js'
 
-
-async (params) => {
-    
-}
 //insertar
 const registro = async (req,res)=>{
     const {correo,contrasena}=req.body;
