@@ -21,5 +21,5 @@ conexion.connect(function(err) {
 export default conexion;
 
 //Se cierra conexion
-//conexion.end();
+conexion.end();
 
